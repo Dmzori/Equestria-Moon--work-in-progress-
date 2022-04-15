@@ -2,3 +2,4 @@ name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hid
 Mana Capacity,manapool,0,,,,Special,2500,TRUE,,,1,1,1,1,data.hullmods.ManaPool,"Spells cost %s for frigates, %s for destroyers, %s for cruisers, or %s for capitals",,graphics/hullmods/ManaPoolTemp1.png
 Test Spell,Pon_Spell_1,0,,,,Special,2500,TRUE,,,1,1,1,1,data.hullmods.Pon_Spell1_Hullmod,Temporarily increases max speed and maneuverability,,graphics/hullmods/Pon_Spell1.png
 Test Spell 2,Pon_Spell_2,0,,,,Special,2500,TRUE,,,1,1,1,1,data.hullmods.Pon_Spell2_Hullmod,Temporarily boosts shield size and effectiveness,,graphics/hullmods/Pon_Spell2.png
+Smoll Mana Cap,Smoll_Mana_Pool,0,,,,Special,2500,TRUE,,,1,1,1,1,data.hullmods.Smoll_ManaPool_Hullmod,Testing different mana setups,,graphics/hullmods/Smoll_ManaPool1.png
