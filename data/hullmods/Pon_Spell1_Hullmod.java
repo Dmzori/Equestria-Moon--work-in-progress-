@@ -17,6 +17,7 @@ public class Pon_Spell1_Hullmod extends BaseHullMod
     @Override
 	public boolean isApplicableToShip(ShipAPI ship)
         {
-            return  ship.getVariant().getHullMods().contains("manapool");
+            return  ship.getVariant().getHullMods().contains("manapool") ||
+                    ship.getVariant().getHullMods().contains("Smoll_Mana_Pool");
         }
 }

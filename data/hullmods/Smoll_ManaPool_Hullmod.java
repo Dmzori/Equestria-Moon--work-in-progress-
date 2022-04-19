@@ -30,7 +30,7 @@ public class Smoll_ManaPool_Hullmod extends BaseHullMod
         int points = 0;
         Object[] hullMods = stats.getVariant().getHullMods().toArray();//gets a collection of hull IDs and changes them to an array
         String hullID = stats.getVariant().getHullSpec().getHullId();
-        if (null != hullID)//this sets a ships mana pool
+        if (hullID != null){//this sets a ships mana pool
             switch (hullID) 
             {
                 case "equestria_ugly": //change to ship ID and set points to that ships mana pool
@@ -42,9 +42,13 @@ public class Smoll_ManaPool_Hullmod extends BaseHullMod
                     break;
                     
                 case "equestria_gust":
-                    points = 1;
+                    points = 2;
                     break;
+                
+                
             }
+        }
+        
         if (hullMods != null && hullMods.length > 0)
         {
             for (Object hullMod : hullMods) 
