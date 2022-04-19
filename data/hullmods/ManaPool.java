@@ -1,4 +1,3 @@
-
 package data.hullmods;
 
 import com.fs.starfarer.api.Global;
@@ -27,6 +26,7 @@ public class ManaPool extends BaseHullMod
         hullSizeMap.put(ShipAPI.HullSize.CAPITAL_SHIP, Float.valueOf(4.0F));
         magicHModMap.put("Pon_Spell_1", Integer.valueOf(1));//try the Float.value of and or just putting the naked object meaning 1
         magicHModMap.put("Pon_Spell_2", Integer.valueOf(1));
+        magicHModMap.put("Pon_Spell_3", Integer.valueOf(1));
     }   
     
     

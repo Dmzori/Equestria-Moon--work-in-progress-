@@ -10,16 +10,16 @@ import java.util.Map;
 
 public class Smoll_ManaPool_Hullmod extends BaseHullMod 
 {
-    private static final Map hullSizeMap = new HashMap<>();
     private static final Map magicHModMap = new HashMap<>();//add hull IDs as keys and their mana point cost as their value
     private static final String MPOOL = "Smoll_Mana_Pool";
-    private static final String MANA_CRYSTAL_ID = "equestrian_crystals";
-    private static final String removedReason = "not enough mana";
+    private static final String MANACRYSTALID = "equestrian_crystals";
+    private static final String REMOVEDREASON = "not enough mana";
     
     static
     {
         magicHModMap.put("Pon_Spell_1", Integer.valueOf(1));//try the Float.value of and or just putting the naked object meaning 1
         magicHModMap.put("Pon_Spell_2", Integer.valueOf(1));
+        magicHModMap.put("Pon_Spell_3", Integer.valueOf(1));
     }   
     
     
@@ -59,10 +59,9 @@ public class Smoll_ManaPool_Hullmod extends BaseHullMod
                     } 
                     else 
                     {
-                        MagicIncompatibleHullmods.removeHullmodWithWarning(
-                                stats.getVariant(), 
+                        MagicIncompatibleHullmods.removeHullmodWithWarning(stats.getVariant(), 
                                 hullMod.toString(), //mod to be removed converted from an object to a string
-                                "Not enough mana"); //reason to remove
+                                REMOVEDREASON); //reason to remove this might break if it isnt a hullmod ID
                     }
                 }
             }
@@ -74,7 +73,7 @@ public class Smoll_ManaPool_Hullmod extends BaseHullMod
     public String getDescriptionParam(int index, ShipAPI.HullSize hullSize)
     {
         if (index == 0)
-            return "" + ((Float)hullSizeMap.get(ShipAPI.HullSize.FRIGATE)).intValue();
+            return "";//this needs to be a ships mana pool
         return null;
     }
 }
